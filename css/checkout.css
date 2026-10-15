@@ -306,6 +306,14 @@
     width: auto;
 }
 
+#submit-hint {
+    display: none;
+}
+
+#submit-hint.checkout-card__hint--visible {
+    display: flex;
+}
+
 @media (max-width: 768px) {
     .checkout {
         padding: 0 0 20px;

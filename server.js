@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname), {
 
 app.listen(PORT, () => {
   console.log('Сервер запущен');
-  console.log(`http://localhost:${PORT}/cart.html`);
+  console.log(`http://localhost:${PORT}/`);
   console.log(`http://localhost:${PORT}/checkout.html`);
   console.log(`http://localhost:${PORT}/success.html`);
   console.log(`API: http://localhost:${PORT}/api/products`);

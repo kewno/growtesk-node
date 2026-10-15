@@ -12,6 +12,8 @@ const DOM = {
   promoApply: document.getElementById('promo-apply'),
   promoClear: document.getElementById('promo-clear'),
   submitOrder: document.getElementById('submit-order'),
+  submitOrderAside: document.getElementById('submit-order-aside'),
+  submitHint: document.getElementById('submit-hint'),
   headerPrice: document.getElementById('header-cart-price'),
   headerCount: document.getElementById('header-cart-count'),
   fields: {
@@ -191,8 +193,18 @@ const validateForm = () => {
   return results.every(Boolean);
 };
 
+const updateSubmitState = () => {
+  const isValid = validateForm();
+
+  if (DOM.submitHint) {
+    DOM.submitHint.classList.toggle('checkout-card__hint--visible', isValid);
+  }
+
+  return isValid;
+};
+
 const submitOrder = () => {
-  if (!validateForm()) {
+  if (!updateSubmitState()) {
     return;
   }
 
@@ -215,14 +227,26 @@ const initHandlers = () => {
     submitOrder();
   });
 
+  if (DOM.submitOrderAside) {
+    DOM.submitOrderAside.addEventListener('click', (e) => {
+      e.preventDefault();
+      submitOrder();
+    });
+  }
+
   Object.keys(DOM.fields).forEach(fieldName => {
     const field = DOM.fields[fieldName];
 
-    field.input.addEventListener('blur', () => validateField(fieldName));
+    field.input.addEventListener('blur', () => {
+      validateField(fieldName);
+      updateSubmitState();
+    });
+
     field.input.addEventListener('input', () => {
       if (field.input.classList.contains('field__input--error')) {
         validateField(fieldName);
       }
+      updateSubmitState();
     });
   });
 
@@ -242,6 +266,8 @@ const initHandlers = () => {
         DOM.fields[fieldName].error.textContent = '';
         input.classList.remove('field__input--error');
       }
+
+      updateSubmitState();
     });
   });
 };
@@ -249,3 +275,4 @@ const initHandlers = () => {
 loadState();
 render();
 initHandlers();
+updateSubmitState();

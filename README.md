@@ -1,6 +1,6 @@
 # Frontend Growtask Test - Корзина
 
-## 🔗 Демо
+## Демо
 
 - **GitHub Pages:** https://твой-логин.github.io/репо/cart.html
 - **Локально с API:** `npm install && npm start` → http://localhost:3000
@@ -19,7 +19,7 @@ npm install
 npm start
 ```
 
-Открой http://localhost:3000/cart.html
+Открой http://localhost:3000
 
 ### Без Node (fallback)
 
