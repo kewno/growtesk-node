@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/breadcrumbs.css">
+    <link rel="stylesheet" href="css/page-title.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+
+            <a href="cart.html" class="header__back" aria-label="Вернуться в корзину">
+                <svg class="header__back-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <a href="cart.html" class="header__logo">
+                <img class="header__logo-img" src="img/logo.svg" alt="Гротеск" width="224" height="40">
+            </a>
+
+            <a href="cart.html" class="header__cart header__cart--desktop">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 20C6 18.8954 6.89543 18 8 18C9.10457 18 10 18.8954 10 20C10 21.1046 9.10457 22 8 22C6.89543 22 6 21.1046 6 20ZM14 20C14 18.8954 14.8954 18 16 18C17.1046 18 18 18.8954 18 20C18 21.1046 17.1046 22 16 22C14.8954 22 14 21.1046 14 20ZM2.30664 3.94737e-06C2.41433 1.97007e-06 2.5512 -0.000444318 2.67188 0.00879301C2.80513 0.019008 2.99065 0.0449551 3.18945 0.135746C3.41852 0.24043 3.61742 0.400799 3.76758 0.601566L3.8291 0.689457L3.90527 0.826176C3.97122 0.960782 4.00657 1.08658 4.02832 1.18457C4.05457 1.30291 4.07265 1.43923 4.08789 1.5459L4.43848 4H20.0332C20.1811 4 20.3567 3.99953 20.5078 4.0127C20.6478 4.0249 20.8496 4.05326 21.0605 4.15528L21.1514 4.20411L21.2627 4.27637C21.5147 4.45489 21.707 4.70775 21.8105 5.00098C21.904 5.26584 21.8941 5.50835 21.8779 5.66797C21.8626 5.81882 21.8294 5.99146 21.8018 6.13672L20.4775 13.0859C20.3922 13.5342 20.3183 13.924 20.2324 14.2432C20.1433 14.5744 20.0253 14.8977 19.8164 15.2012C19.5008 15.6596 19.0631 16.0218 18.5537 16.2461C18.2166 16.3945 17.8772 16.45 17.5352 16.4756C17.2055 16.5002 16.808 16.5 16.3516 16.5H7.79395C7.31424 16.5 6.89804 16.5011 6.55371 16.4746C6.19695 16.4472 5.84308 16.3859 5.49414 16.2256C4.96873 15.9842 4.52389 15.5965 4.21387 15.1084C4.00803 14.7843 3.90044 14.4416 3.8252 14.0918C3.75257 13.7542 3.69749 13.3416 3.63281 12.8662L2.58008 5.13477V5.13379L2.13281 2H1C0.447715 2 0 1.55229 0 1C0 0.447719 0.447715 3.94737e-06 1 3.94737e-06H2.30664ZM5.61426 12.5967C5.68304 13.1023 5.72754 13.4257 5.78027 13.6709C5.83039 13.9039 5.87372 13.9911 5.90234 14.0361C6.00568 14.1988 6.15398 14.3277 6.3291 14.4082C6.37762 14.4305 6.46947 14.4622 6.70703 14.4805C6.9571 14.4997 7.28365 14.5 7.79395 14.5H16.3516C16.8375 14.5 17.1478 14.4992 17.3857 14.4814C17.6111 14.4646 17.7002 14.4361 17.748 14.415C17.9178 14.3403 18.0638 14.2201 18.1689 14.0674C18.1986 14.0243 18.243 13.9419 18.3018 13.7236C18.3637 13.4933 18.4218 13.189 18.5127 12.7119L19.792 6H4.7168L5.61426 12.5967Z" fill="#A61029"/>
+                </svg>
+                <span class="header__cart-price" id="header-cart-price">0 ₽</span>
+                <span class="header__cart-count" id="header-cart-count">0</span>
+            </a>
+
+            <span class="header__title">Оформление заказа</span>
+        </div>
+    </div>
+</header>
+
+<nav class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item breadcrumbs__item--icon">
+                <a href="cart.html" class="breadcrumbs__link breadcrumbs__link--home" aria-label="Главная">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.00008 8.22205C8.00008 8.02442 7.99927 7.9163 7.99292 7.83858C7.99266 7.83535 7.99189 7.83235 7.99162 7.82947C7.98915 7.82924 7.98654 7.82904 7.98381 7.82882C7.90612 7.82247 7.79786 7.82231 7.60035 7.82231H5.73316C5.53564 7.82231 5.42738 7.82247 5.34969 7.82882C5.34672 7.82906 5.3439 7.82922 5.34123 7.82947C5.34097 7.83233 5.34084 7.83537 5.34058 7.83858C5.33423 7.9163 5.33342 8.02442 5.33342 8.22205V12.489H8.00008V8.22205ZM9.33342 12.489H10.5333C10.9177 12.489 11.166 12.4881 11.3549 12.4727C11.536 12.4579 11.6032 12.4329 11.6362 12.4161C11.7615 12.3522 11.8633 12.2503 11.9272 12.125C11.944 12.0921 11.969 12.0247 11.9838 11.8438C11.9992 11.6549 12.0001 11.4065 12.0001 11.0222V6.19861C12.0001 5.77816 11.9942 5.6951 11.9753 5.62765C11.9535 5.54964 11.9174 5.47598 11.8692 5.41085C11.8276 5.35462 11.7652 5.29889 11.4337 5.04106L6.91219 1.52413C6.78772 1.42732 6.72139 1.3766 6.67131 1.34314C6.66968 1.34206 6.66824 1.34086 6.66675 1.33989C6.66527 1.34086 6.66382 1.34206 6.66219 1.34314C6.61212 1.3766 6.54578 1.42732 6.42131 1.52413L1.89982 5.04106C1.56833 5.29889 1.50594 5.35462 1.46428 5.41085C1.41611 5.47598 1.38002 5.54964 1.35816 5.62765C1.33928 5.6951 1.33342 5.77816 1.33342 6.19861V11.0222L1.33537 11.5059C1.33743 11.6397 1.34197 11.7493 1.34969 11.8438C1.36449 12.0247 1.38955 12.0921 1.40633 12.125C1.47024 12.2503 1.57205 12.3522 1.69735 12.4161C1.73031 12.4329 1.79753 12.4579 1.9786 12.4727C2.16749 12.4881 2.41585 12.489 2.80022 12.489H4.00008V8.22205C4.00008 8.04639 3.99934 7.87445 4.01115 7.72986C4.02361 7.57751 4.05312 7.39772 4.14527 7.21684C4.27308 6.966 4.47713 6.76199 4.72795 6.63416C4.90878 6.54202 5.08864 6.51251 5.24097 6.50004C5.38551 6.48823 5.55756 6.48897 5.73316 6.48898H7.60035C7.77594 6.48897 7.94799 6.48823 8.09253 6.50004C8.24487 6.51251 8.42472 6.54202 8.60555 6.63416C8.82506 6.74603 9.00872 6.91617 9.1368 7.12504L9.18824 7.21684L9.24618 7.35161C9.29398 7.48572 9.313 7.61551 9.32235 7.72986C9.33416 7.87445 9.33342 8.04639 9.33342 8.22205V12.489ZM13.3334 11.0222C13.3334 11.3844 13.3341 11.6962 13.3132 11.9519C13.2917 12.2154 13.2438 12.4777 13.1153 12.7299C12.9236 13.1061 12.6179 13.4125 12.2416 13.6042C11.9894 13.7327 11.7271 13.7799 11.4636 13.8015C11.2078 13.8224 10.8957 13.8223 10.5333 13.8223H2.80022C2.43785 13.8223 2.12566 13.8224 1.86988 13.8015C1.60638 13.7799 1.34407 13.7327 1.09188 13.6042C0.715626 13.4125 0.409904 13.1061 0.218184 12.7299C0.0897148 12.4777 0.0417966 12.2154 0.0202671 11.9519C0.00984087 11.8241 0.00517129 11.6824 0.00268897 11.5274L8.48061e-05 11.0222V6.19861C8.21658e-05 5.85356 -0.00549668 5.55336 0.0743036 5.26827C0.139861 5.03418 0.247478 4.814 0.392012 4.61853C0.568033 4.38055 0.808495 4.20077 1.08081 3.98898L5.6023 0.472048C5.78785 0.327731 6.02824 0.124842 6.31844 0.0462669C6.51807 -0.00775397 6.72714 -0.0144527 6.92912 0.0260846L7.01506 0.0462669L7.12183 0.0814231C7.36463 0.174835 7.56889 0.3458 7.7312 0.472048L12.2527 3.98898C12.525 4.20077 12.7655 4.38055 12.9415 4.61853C13.086 4.814 13.1936 5.03418 13.2592 5.26827C13.339 5.55336 13.3334 5.85356 13.3334 6.19861V11.0222Z" fill="#2B2B2B"/>
+                    </svg>
+                </a>
+            </li>
+            <li class="breadcrumbs__item">
+                <span class="breadcrumbs__separator">/</span>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="cart.html">
+                    <span class="breadcrumbs__current">Корзина</span>
+                </a>
+            </li>
+            <li class="breadcrumbs__item">
+                <span class="breadcrumbs__separator">/</span>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="checkout.html">
+                    <span class="breadcrumbs__current">Оформление заказа</span>
+                </a>
+            </li>
+        </ol>
+    </div>
+</nav>
+
+<main>
+    <div class="page-title">
+        <div class="container">
+            <div class="page-title__inner">
+                <h1 class="page-title__text">Оформление заказа</h1>
+            </div>
+        </div>
+    </div>
+
+    <section class="checkout">
+        <div class="container">
+            <div class="checkout__inner">
+
+                <div class="checkout__steps">
+
+                    <div class="checkout-card">
+                        <div class="checkout-card__top">
+                            <h2 class="checkout-card__title" id="checkout-count">0 товаров</h2>
+                        </div>
+
+                        <ul class="checkout-products" id="checkout-products"></ul>
+
+                        <a class="btn btn--back-basket" href="cart.html">
+                            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Вернуться в корзину
+                        </a>
+                    </div>
+
+                    <div class="checkout-card">
+                        <div class="checkout-card__top">
+                            <h2 class="checkout-card__title">Покупатель</h2>
+                            <p class="checkout-card__subtitle">Укажите свои данные для покупки наших товаров</p>
+                        </div>
+
+                        <form class="checkout-form" onsubmit="return false;">
+
+                            <div class="checkout-form__row">
+                                <label class="field" id="field-name">
+                                    <span class="field__label">Имя*</span>
+                                    <span class="field__input-wrap">
+                                        <input class="field__input" type="text" placeholder="Иван" id="input-name">
+                                        <button class="field__clear" type="button" aria-label="Очистить">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                    <span class="field__error" id="error-name"></span>
+                                </label>
+                                <label class="field" id="field-surname">
+                                    <span class="field__label">Фамилия*</span>
+                                    <span class="field__input-wrap">
+                                        <input class="field__input" type="text" placeholder="Иванов" id="input-surname">
+                                        <button class="field__clear" type="button" aria-label="Очистить">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                    <span class="field__error" id="error-surname"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkout-form__row">
+                                <label class="field" id="field-phone">
+                                    <span class="field__label">Телефон*</span>
+                                    <span class="field__input-wrap">
+                                        <span class="field__icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <input class="field__input" type="tel" placeholder="+7 800 555 35 35" id="input-phone">
+                                        <button class="field__clear" type="button" aria-label="Очистить">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                    <span class="field__error" id="error-phone"></span>
+                                </label>
+                                <label class="field" id="field-email">
+                                    <span class="field__label">Почта*</span>
+                                    <span class="field__input-wrap">
+                                        <span class="field__icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                                                <path d="M2 7l10 6 10-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <input class="field__input" type="email" placeholder="mail@example.com" id="input-email">
+                                        <button class="field__clear" type="button" aria-label="Очистить">
+                                            <svg viewBox="0 0 24 24" fill="none">
+                                                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                    <span class="field__error" id="error-email"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkout-form__info">
+                                <div class="checkout-form__divider"></div>
+                                <div class="checkout-form__hint">
+                                    <svg class="checkout-form__hint-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M12 8v5M12 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                    <span>Внимательно проверьте контактные данные, они нужны для получения заказа</span>
+                                </div>
+                                <div class="checkout-form__divider"></div>
+                            </div>
+
+                            <label class="field">
+                                <span class="field__label">Комментарий к заказу</span>
+                                <span class="field__input-wrap field__input-wrap--textarea">
+                                    <textarea class="field__input field__input--textarea" placeholder="Напишите свои пожелания…"></textarea>
+                                </span>
+                            </label>
+
+                            <label class="checkout-form__checkbox">
+                                <input class="checkbox" type="checkbox">
+                                <span class="checkout-form__mailing">Хочу получать уведомления о скидках и специальных предложениях</span>
+                            </label>
+                        </form>
+                    </div>
+
+                    <div class="checkout-card">
+                        <div class="checkout-card__top">
+                            <h2 class="checkout-card__title">Способ оплаты</h2>
+                            <p class="checkout-card__subtitle">Выберите удобный способ оплаты заказа</p>
+                        </div>
+
+                        <div class="checkout-methods">
+                            <label class="checkout-method">
+                                <input class="checkout-method__radio" type="radio" name="payment" checked>
+                                <span class="checkout-method__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <rect x="2" y="5" width="20" height="14" rx="2.5" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M2 10h20" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M6 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </span>
+                                <span class="checkout-method__text">
+                                    <span class="checkout-method__title">Онлайн</span>
+                                    <span class="checkout-method__desc">Visa, Mastercard, Мир, SberPay</span>
+                                </span>
+                                <span class="checkout-method__dot" aria-hidden="true"></span>
+                            </label>
+
+                            <label class="checkout-method">
+                                <input class="checkout-method__radio" type="radio" name="payment">
+                                <span class="checkout-method__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M5 3h14v18l-2-1.5L15 21l-3-1.5L9 21l-2-1.5L5 21V3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                        <path d="M9 8h6M9 12h6M9 16h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </span>
+                                <span class="checkout-method__text">
+                                    <span class="checkout-method__title">При получении</span>
+                                    <span class="checkout-method__desc">Наличными или картой при получении</span>
+                                </span>
+                                <span class="checkout-method__dot" aria-hidden="true"></span>
+                            </label>
+                        </div>
+
+                        <div class="checkout-card__info">
+                            <div class="checkout-card__divider"></div>
+                            <div class="checkout-card__hint">
+                                <svg class="checkout-card__hint-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 8v5M12 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <span class="checkout-card__text">При оформлении заказа вы будете перенаправлены на страницу платёжной системы</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkout-card__bottom">
+                        <button class="btn btn--primary" type="button" id="submit-order">Оформить заказ</button>
+                        <div class="checkout-card__hint checkout-card__hint--gray">
+                            <svg class="checkout-card__hint-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 8v5M12 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>Вы указали все необходимые данные, теперь можно оформить заказ</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <aside class="cart__aside">
+                    <div class="summary">
+                        <h2 class="summary__title">Ваша корзина:</h2>
+
+                        <dl class="summary__list">
+                            <div class="summary__row">
+                                <dt id="summary-count">0 товаров:</dt>
+                                <dd id="summary-price">0 ₽</dd>
+                            </div>
+                            <div class="summary__divider"></div>
+
+                            <div class="summary__row">
+                                <dt>Скидка:</dt>
+                                <dd class="summary__discount" id="summary-discount">0 ₽</dd>
+                            </div>
+                            <div class="summary__divider"></div>
+
+                            <div class="summary__row summary__row--total">
+                                <dt>Итого:</dt>
+                                <dd id="summary-total">0 ₽</dd>
+                            </div>
+                            <div class="summary__divider"></div>
+                        </dl>
+
+                        <button class="btn btn--primary" type="button">Оформить заказ</button>
+                    </div>
+
+                    <div class="promo">
+                        <button class="promo__toggle" type="button" aria-expanded="true" aria-controls="promo-form">
+                            <svg class="promo__icon" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 5.79981C16 4.94342 15.9997 4.36117 15.9629 3.91113C15.9271 3.47272 15.8619 3.2482 15.7822 3.0918C15.5905 2.71555 15.2845 2.40951 14.9082 2.21778C14.7518 2.13809 14.5273 2.07293 14.0889 2.03711C13.6388 2.00035 13.0566 2 12.2002 2H5.79981C4.94342 2 4.36117 2.00035 3.91113 2.03711C3.47272 2.07293 3.2482 2.13809 3.0918 2.21778C2.71555 2.40951 2.40951 2.71555 2.21778 3.0918C2.13809 3.2482 2.07293 3.47272 2.03711 3.91113C2.00035 4.36117 2 4.94342 2 5.79981V17.0361L3.16211 16.1914L3.30371 16.1045C3.64774 15.9329 4.06708 15.9724 4.375 16.2188L6.2793 17.7422L8.41211 16.1914L8.54883 16.1074C8.87938 15.9402 9.28115 15.9684 9.58789 16.1914L11.7197 17.7422L13.625 16.2188C13.9768 15.9373 14.4735 15.9265 14.8379 16.1914L16 17.0361V5.79981ZM11.793 5.29297C12.1835 4.90245 12.8165 4.90245 13.207 5.29297C13.5976 5.6835 13.5976 6.31651 13.207 6.70703L8.70703 11.207C8.31651 11.5976 7.6835 11.5976 7.29297 11.207L5.29297 9.20703C4.90245 8.81651 4.90245 8.18349 5.29297 7.79297C5.6835 7.40245 6.31651 7.40245 6.70703 7.79297L8 9.08594L11.793 5.29297ZM18 19C18 19.3761 17.7892 19.7209 17.4541 19.8916C17.119 20.0623 16.7163 20.0297 16.4121 19.8086L14.2793 18.2568L12.375 19.7813C12.0232 20.0627 11.5265 20.0735 11.1621 19.8086L9 18.2354L6.83789 19.8086C6.47351 20.0735 5.97681 20.0627 5.625 19.7813L3.71973 18.2568L1.58789 19.8086C1.28372 20.0297 0.881028 20.0623 0.5459 19.8916C0.210765 19.7209 1.9493e-06 19.3761 1.9493e-06 19V5.79981C1.82682e-06 4.97632 -0.00102054 4.29843 0.0439473 3.74805C0.0898762 3.18599 0.188274 2.6689 0.435549 2.1836C0.819018 1.43109 1.43109 0.819018 2.1836 0.435549C2.6689 0.188274 3.18599 0.0898762 3.74805 0.0439473C4.29843 -0.00102053 4.97632 1.8265e-06 5.79981 1.94928e-06H12.2002C13.0237 1.8265e-06 13.7016 -0.00102053 14.252 0.0439473C14.814 0.0898761 15.3311 0.188274 15.8164 0.435549C16.5689 0.819018 17.181 1.43109 17.5645 2.1836C17.8117 2.6689 17.9101 3.18599 17.9561 3.74805C18.001 4.29843 18 4.97632 18 5.79981V19Z" fill="#2B2B2B"/>
+                            </svg>
+                            <span>Промокод</span>
+                            <svg class="promo__chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                        <form class="promo__form" id="promo-form" onsubmit="return false;">
+                            <label class="field">
+                                <span class="field__label">Введите промокод</span>
+                                <span class="field__input-wrap">
+                                    <input class="field__input" type="text" placeholder="Введите код" id="promo-input">
+                                    <button class="field__clear" type="button" aria-label="Очистить" id="promo-clear">
+                                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                </span>
+                            </label>
+                            <button class="btn btn--dark" type="submit" id="promo-apply">Применить</button>
+                        </form>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__info">
+                <span class="footer__copyright">@ Company name 2026</span>
+                <a class="footer__logo" href="cart.html">
+                    <img class="footer__img" src="img/logo.svg" alt="Гротеск">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/promo.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

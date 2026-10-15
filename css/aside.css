@@ -1,0 +1,140 @@
+.cart__aside {
+    width: 340px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-near);
+}
+
+.summary__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.1;
+    color: var(--color-darker);
+    margin: 0;
+}
+
+.summary__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.summary__row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--color-text-dark);
+}
+
+.summary__row dt {
+    flex-shrink: 0;
+}
+
+.summary__row dd {
+    flex: 1;
+    text-align: right;
+    color: var(--color-dark);
+    margin: 0;
+}
+
+.summary__row--total {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.1;
+    color: var(--color-dark);
+}
+
+.summary__row dd.summary__discount {
+    color: var(--color-error);
+    font-weight: 700;
+}
+
+.summary__divider {
+    height: 2px;
+    background: var(--color-border);
+}
+
+.promo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.promo__toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-darker);
+    text-align: left;
+}
+
+.promo__icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.promo__chevron {
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    transition: transform 0.25s ease;
+}
+
+.promo__toggle[aria-expanded="false"] .promo__chevron {
+    transform: rotate(-180deg);
+}
+
+.promo__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: hidden;
+    max-height: 300px;
+    opacity: 1;
+    transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+
+.promo__toggle[aria-expanded="false"] + .promo__form {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 1366px) {
+    .cart__aside {
+        width: 304px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart__aside {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .summary__title {
+        font-size: 20px;
+    }
+
+    .summary__row--total {
+        font-size: 20px;
+    }
+}
